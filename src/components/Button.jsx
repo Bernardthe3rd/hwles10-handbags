@@ -1,7 +1,7 @@
-function Button({children, onClicked, type, invisable}) {
+function Button({text, type, invisable}) {
     return (
-        <button onClick={onClicked} type={type} disabled={invisable}>
-            {children}
+        <button onClick={() => console.log({text})} type={type} disabled={invisable}>
+            {text}
         </button>
     );
 }

@@ -1,10 +1,10 @@
 
-function Tile(props) {
-    let result = props.imageSrc
+function Tile({imageSrc, imageAlt, children}) {
+    let result = imageSrc
     if (result.includes('assets')) {
-        result = <img src={props.imageSrc} alt={props.imageAlt}/>
+        result = <img src={imageSrc} alt={imageAlt}/>
     } else {
-        result = props.children
+        result = children
     }
     return (
         <section>
@@ -14,3 +14,17 @@ function Tile(props) {
 }
 
 export default Tile;
+
+//Alternatieve opties door uitwerkingen gegeven:
+// function Tile({ image, imgDescription, title, children }) {
+//     console.log(image, imgDescription, title, children)
+//     return (
+//         <section>
+//             {image && <img src={image} alt={imgDescription} />}
+//             <h2>{title}</h2>
+//             {children}
+//         </section>
+//     );
+// }
+//
+// export default Tile;

@@ -1,10 +1,10 @@
-function Product(props) {
+function Product({textLabel, imageSrc, imageAlt, nameBag, price}) {
     return (
         <article>
-            <span>{props.textLabel}</span>
-            <img src={props.imageSrc} alt={props.imageAlt}/>
-            <p>{props.nameBag}</p>
-            <h4>{props.price}</h4>
+            <span>{textLabel}</span>
+            <img src={imageSrc} alt={imageAlt}/>
+            <p>{nameBag}</p>
+            <h4>{price}</h4>
         </article>
     )
 }
